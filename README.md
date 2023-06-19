@@ -1,11 +1,26 @@
-# Lexical Analayzer
+# Lexical Analyzer
 
-lexical analyzer using a FSM
+Lexical analyzer using an FSM
 
 ## Description
 
-To write a lexical analyzer using a FSM. Using a function named lexer(), that returns a token when needed. The lexer should return a token and a lexeme. 
-Program reads a file of source code, generates tokens, and outputs the results - printing both tokens and lexemes.
+To write a lexical analyzer using an FSM. Using a function named lexer(), that returns a token when needed. The lexer should return a token and a lexeme. 
+The program reads a file of source code, generates tokens, and outputs the results - printing both tokens and lexemes.
+
+## Design
+
+Using a struct for token type and using a vector for the Lexer. 3 major functions. A function to retrieve the state of the current element being analyzed. A vector to find the tokens. Finally, a function to retrieve the lexeme name.
+
+Regular Expressions:
+Letter = [a-zA-z]
+Digit = [0-9]
+Period = [.]
+Under = [ _ ]
+
+Integer = (digit)+
+Real = (digit)(period)?(digit)
+Identifier = (letter)(letter | digit | under)*
+
 
 ## Getting Started
 
